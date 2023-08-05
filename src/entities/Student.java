@@ -1,8 +1,8 @@
 package entities;
 
 public class Student {
-    public Student(int id, String name, int age, String address, double point, String classroom) {
-        this.id = id;
+    public Student( String name, int age, String address, double point, String classroom) {
+        this.id = ++studentId;
         this.name = name;
         this.age = age;
         this.address = address;
@@ -10,6 +10,7 @@ public class Student {
         this.classroom = classroom;
     }
 
+    public static int studentId;
     private int id;
     private String name;
     private int age;
@@ -67,7 +68,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "entities.Student{" +
+        return "Danh sách học sinh:{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
